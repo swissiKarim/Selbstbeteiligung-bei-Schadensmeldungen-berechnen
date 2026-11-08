@@ -1,0 +1,18 @@
+{
+  "name": "insurance-claims-lib",
+  "version": "1.0.0",
+  "description": "Berechnungs- und Validierungslogik für Versicherungs-Schadensmeldungen",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest --reporters=default --reporters=jest-junit"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "jest": "^29.7.0",
+    "jest-junit": "^16.0.0",
+    "ts-jest": "^29.1.4",
+    "typescript": "^5.4.5"
+  }
+}
