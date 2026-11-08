@@ -182,6 +182,23 @@ describe("US2 – Auszahlungsobergrenze", () => {
       // basis: 5500 − 500 = 5000 (= Obergrenze)
       expect(berechneAuszahlung(5500, "basis").gekuerzt).toBe(false);
     });
+
+    it("gekuerzt ist ein boolean-Feld im BerechnungsErgebnis", () => {
+      const ergebnis = berechneAuszahlung(10000, "basis");
+      expect(typeof ergebnis.gekuerzt).toBe("boolean");
+    });
+
+    it("komfort: Auszahlung wird auf 20.000 EUR begrenzt, gekuerzt true", () => {
+      const ergebnis = berechneAuszahlung(25000, "komfort");
+      expect(ergebnis.auszahlung).toBe(20000);
+      expect(ergebnis.gekuerzt).toBe(true);
+    });
+
+    it("premium: Auszahlung wird auf 50.000 EUR begrenzt, gekuerzt true", () => {
+      const ergebnis = berechneAuszahlung(60000, "premium");
+      expect(ergebnis.auszahlung).toBe(50000);
+      expect(ergebnis.gekuerzt).toBe(true);
+    });
   });
 });
 
