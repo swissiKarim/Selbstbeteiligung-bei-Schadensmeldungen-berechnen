@@ -1,5 +1,5 @@
 schemaVersion: 2
-rationale: TypeScript library with Jest (ts-jest) for insurance claim payout calculation. No runtime dependencies. Tests run via npm test with jest-junit XML report.
+rationale: TypeScript library with Jest (ts-jest) for insurance claim payout calculation. No runtime dependencies. Tests run via npm test with jest-junit XML report written by jest.config.js.
 components:
   - name: app
     path: .
@@ -7,7 +7,7 @@ components:
       image: agentsphere/sandbox-polyglot
     verify:
       - npm ci
-      - npm test
+      - mkdir -p .agentsphere/reports && npm test
     artifacts_ignore:
       - node_modules/
       - dist/
