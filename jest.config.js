@@ -10,6 +10,9 @@ module.exports = {
       {
         outputDirectory: ".agentsphere/reports",
         outputName: "junit.xml",
+        classNameTemplate: "{filepath}",
+        titleTemplate: "{title}",
+        ancestorSeparator: " › ",
       },
     ],
   ],
