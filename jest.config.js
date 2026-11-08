@@ -13,6 +13,7 @@ module.exports = {
         classNameTemplate: "{filepath}",
         titleTemplate: "{title}",
         ancestorSeparator: " › ",
+        addFileAttribute: "true",
       },
     ],
   ],
