@@ -1,0 +1,10 @@
+node_modules/
+dist/
+coverage/
+*.tsbuildinfo
+junit.xml
+.agentsphere/reports/
+.env
+.env.*
+*.log
+.DS_Store
